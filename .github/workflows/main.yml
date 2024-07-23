@@ -23,3 +23,19 @@ deploy-prod:
   environment: production
 
 on: push
+
+name: main
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+    check_ci:
+        steps:
+#          - uses: actions/checkout@v2
+#          - uses: actions/setup-node@v2
+#             with:
+#              node-version: '12'
+#              check-latest: true
+          - run: echo "run"
+#          - run: npm check-rules
